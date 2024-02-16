@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package filetransfer;
+
+message FileRequest {
+  string name = 1;
+  int64 size = 2;
+  bytes content = 3;
+}
+
+message FileResponse {
+  bytes content = 1;
+}
+
+service FileTransfer {
+  rpc transfer_file (FileRequest) returns (FileResponse);
+}
