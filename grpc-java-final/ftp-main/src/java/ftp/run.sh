@@ -18,7 +18,7 @@ CLIENT_CLASS=$PACKAGE.Client
 test() {
     file=$1
     DIFF=$(diff $SERVER_DB/$file $CLIENT_DB/$file)
-    
+
     if [[ $DIFF == "" ]]
     then
         echo "OK - The files match"

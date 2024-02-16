@@ -14,8 +14,18 @@ En la carpeta gRPC-TP/grpc-ruby esta el codigo del envio de archivos en ruby
 
 comandos para grpc-ruby:
 
-```rb
-ruby server.rb
+En una terminal
+
+```sh
+cd grpc-ruby
+docker-compose build
+docker-compose up
+```
+
+En otra terminal
+
+```sh
+docker exec -it grpc-ruby_app_1 bash
 ```
 
 ```rb
